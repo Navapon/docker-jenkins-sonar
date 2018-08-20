@@ -1,8 +1,6 @@
 version: '3.3'
 services:
   jenkins:
-    # image: jenkins:2.60.3
-    # image: jenkins/jenkins:2.136-alpine
     build: ./jenkins
     container_name: jenkins
     ports:

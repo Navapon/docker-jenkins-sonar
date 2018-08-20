@@ -3,6 +3,10 @@
 
 # jenkins
 jenkins/data/*
+jenkins/config/*
+jenkins/data/*
+jenkins/extensions/*
+jenkins/plugins/*
 
 ### macOS ###
 # General
