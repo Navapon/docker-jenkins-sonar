@@ -1,0 +1,1 @@
+typescript,true,sonar-typescript-plugin-1.7.0.2893.jar|8313c4aaa33b4c3c00652ffe3db2dc2c

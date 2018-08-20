@@ -1,0 +1,35 @@
+version: '3.3'
+services:
+  jenkins:
+    # image: jenkins:2.60.3
+    # image: jenkins/jenkins:2.136-alpine
+    build: ./jenkins
+    container_name: jenkins
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - ./test:/var/jenkins_home
+      - /usr/local/bin/docker:/usr/bin/docker
+      - /var/run/docker.sock:/var/run/docker.sock
+  sonarqube:
+    image: sonarqube:6.7.5-alpine
+    container_name: sonarqube
+    ports:
+      - 9000:9000
+      - 9092:9092
+    volumes:
+      - ./sonarqube/config:/opt/sonarqube/conf
+      - ./sonarqube/data:/opt/sonarqube/data
+      - ./sonarqube/extensions:/opt/sonarqube/extensions
+      - ./sonarqube/plugins:/opt/sonarqube/lib/bundled-plugins
+  # db:
+  #   image: postgres:9.6
+  #   container_name: postgres
+  #   environment:
+  #     - POSTGRES_USER=sonar
+  #     - POSTGRES_PASSWORD=sonar
+  #   volumes:
+  #     - ./postgresql:/var/lib/postgresql
+  #     # This needs explicit mapping due to https://github.com/docker-library/postgres/blob/4e48e3228a30763913ece952c611e5e9b95c8759/Dockerfile.template#L52
+  #     - ./postgresql/data:/var/lib/postgresql/data
