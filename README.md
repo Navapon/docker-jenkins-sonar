@@ -6,3 +6,7 @@
     for CI/CD purpose more information in Docker file 
 ### 2. Sonarqube
     for check quality source code
+
+# Jenkinsfile
+
+### on jenkins file section enveronment to need to setup on your own jenkins setting
