@@ -8,6 +8,9 @@ jenkins/data/*
 jenkins/extensions/*
 jenkins/plugins/*
 
+# sonar qube
+sonarqube/data/*
+
 ### macOS ###
 # General
 .DS_Store
