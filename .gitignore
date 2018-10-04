@@ -10,6 +10,7 @@ jenkins/plugins/*
 
 # sonar qube
 sonarqube/data/*
+sonarqube/data/sonar.h2.db
 
 ### macOS ###
 # General
